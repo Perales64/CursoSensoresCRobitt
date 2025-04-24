@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "JOSE EMMANUEL PERALES AVELINO",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": { "builder": "esp-idf" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 17.9, "left": 134.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "pot1:GND", "esp:GND.2", "black", [ "v19.2", "h-38.4", "v-76.8" ] ],
+    [ "pot1:SIG", "esp:2", "green", [ "v0" ] ],
+    [ "pot1:VCC", "esp:5V", "red", [ "v163.2", "h-212", "v-48" ] ]
+  ],
+  "dependencies": {}
+}
